@@ -1,0 +1,52 @@
+<%= form_for(transit) do |f| %>
+  <% if transit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transit.errors.count, "error") %> prohibited this transit from being saved:</h2>
+
+      <ul>
+      <% transit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_delivered %>
+    <%= f.text_field :date_delivered %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sender_string %>
+    <%= f.text_field :sender_string %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_field :comment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :shipping_weight %>
+    <%= f.number_field :shipping_weight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :arrived %>
+    <%= f.check_box :arrived %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

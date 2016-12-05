@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @arrived.id %>
+</p>
+
+<p>
+  <strong>Date arrived pittsburgh:</strong>
+  <%= @arrived.date_arrived_pittsburgh %>
+</p>
+
+<p>
+  <strong>Sender string:</strong>
+  <%= @arrived.sender_string %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @arrived.description %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @arrived.comment %>
+</p>
+
+<p>
+  <strong>Shipping weight:</strong>
+  <%= @arrived.shipping_weight %>
+</p>
+
+<p>
+  <strong>Discard:</strong>
+  <%= @arrived.discard %>
+</p>
+
+<%= link_to 'Edit', edit_arrived_path(@arrived) %> |
+<%= link_to 'Back', arriveds_path %>

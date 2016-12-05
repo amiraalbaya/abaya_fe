@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_arrived_pittsburgh: MyString
+  date_delivered: MyString
+  date_arrived_qatar: MyString
+  sender: MyString
+  description: MyString
+  comment: MyString
+  shipping_weight: 1
+  discarded: false
+  delivered: false
+
+two:
+  date_arrived_pittsburgh: MyString
+  date_delivered: MyString
+  date_arrived_qatar: MyString
+  sender: MyString
+  description: MyString
+  comment: MyString
+  shipping_weight: 1
+  discarded: false
+  delivered: false

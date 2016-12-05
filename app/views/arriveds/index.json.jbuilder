@@ -1,0 +1,1 @@
+json.array! @arriveds, partial: 'arriveds/arrived', as: :arrived

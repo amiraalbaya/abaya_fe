@@ -1,0 +1,1 @@
+json.partial! "arrived_qatars/arrived_qatar", arrived_qatar: @arrived_qatar

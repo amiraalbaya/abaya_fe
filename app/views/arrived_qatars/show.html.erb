@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date arrived pittsburgh:</strong>
+  <%= @arrived_qatar.date_arrived_pittsburgh %>
+</p>
+
+<p>
+  <strong>Date delivered:</strong>
+  <%= @arrived_qatar.date_delivered %>
+</p>
+
+<p>
+  <strong>Date arrived qatar:</strong>
+  <%= @arrived_qatar.date_arrived_qatar %>
+</p>
+
+<p>
+  <strong>Sender:</strong>
+  <%= @arrived_qatar.sender %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @arrived_qatar.description %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @arrived_qatar.comment %>
+</p>
+
+<p>
+  <strong>Shipping weight:</strong>
+  <%= @arrived_qatar.shipping_weight %>
+</p>
+
+<p>
+  <strong>Delivered:</strong>
+  <%= @arrived_qatar.delivered %>
+</p>
+
+<%= link_to 'Edit', edit_arrived_qatar_path(@arrived_qatar) %> |
+<%= link_to 'Back', arrived_qatars_path %>

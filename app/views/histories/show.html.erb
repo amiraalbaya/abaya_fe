@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date arrived pittsburgh:</strong>
+  <%= @history.date_arrived_pittsburgh %>
+</p>
+
+<p>
+  <strong>Date delivered:</strong>
+  <%= @history.date_delivered %>
+</p>
+
+<p>
+  <strong>Date arrived qatar:</strong>
+  <%= @history.date_arrived_qatar %>
+</p>
+
+<p>
+  <strong>Sender:</strong>
+  <%= @history.sender %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @history.description %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @history.comment %>
+</p>
+
+<p>
+  <strong>Shipping weight:</strong>
+  <%= @history.shipping_weight %>
+</p>
+
+<p>
+  <strong>Discarded:</strong>
+  <%= @history.discarded %>
+</p>
+
+<p>
+  <strong>Delivered:</strong>
+  <%= @history.delivered %>
+</p>
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Arriveds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Date arrived pittsburgh</th>
+      <th>Sender string</th>
+      <th>Description</th>
+      <th>Comment</th>
+      <th>Shipping weight</th>
+      <th>Discard</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @arriveds.each do |arrived| %>
+      <tr>
+        <td><%= arrived.id %></td>
+        <td><%= arrived.date_arrived_pittsburgh %></td>
+        <td><%= arrived.sender_string %></td>
+        <td><%= arrived.description %></td>
+        <td><%= arrived.comment %></td>
+        <td><%= arrived.shipping_weight %></td>
+        <td><%= arrived.discard %></td>
+        <td><%= link_to 'Show', arrived %></td>
+        <td><%= link_to 'Edit', edit_arrived_path(arrived) %></td>
+        <td><%= link_to 'Destroy', arrived, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Arrived', new_arrived_path %>

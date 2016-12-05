@@ -1,0 +1,2 @@
+json.extract! history, :id, :date_arrived_pittsburgh, :date_delivered, :date_arrived_qatar, :sender, :description, :comment, :shipping_weight, :discarded, :delivered, :created_at, :updated_at
+json.url history_url(history, format: :json)

@@ -1,0 +1,2 @@
+json.extract! arrived_qatar, :id, :date_arrived_pittsburgh, :date_delivered, :date_arrived_qatar, :sender, :description, :comment, :shipping_weight, :delivered, :created_at, :updated_at
+json.url arrived_qatar_url(arrived_qatar, format: :json)

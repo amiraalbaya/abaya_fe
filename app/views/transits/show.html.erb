@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @transit.id %>
+</p>
+
+<p>
+  <strong>Date delivered:</strong>
+  <%= @transit.date_delivered %>
+</p>
+
+<p>
+  <strong>Sender string:</strong>
+  <%= @transit.sender_string %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @transit.description %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @transit.comment %>
+</p>
+
+<p>
+  <strong>Shipping weight:</strong>
+  <%= @transit.shipping_weight %>
+</p>
+
+<p>
+  <strong>Arrived:</strong>
+  <%= @transit.arrived %>
+</p>
+
+<%= link_to 'Edit', edit_transit_path(@transit) %> |
+<%= link_to 'Back', transits_path %>

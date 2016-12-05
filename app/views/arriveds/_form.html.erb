@@ -1,0 +1,52 @@
+<%= form_for(arrived) do |f| %>
+  <% if arrived.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(arrived.errors.count, "error") %> prohibited this arrived from being saved:</h2>
+
+      <ul>
+      <% arrived.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_arrived_pittsburgh %>
+    <%= f.text_field :date_arrived_pittsburgh %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sender_string %>
+    <%= f.text_field :sender_string %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_field :comment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :shipping_weight %>
+    <%= f.number_field :shipping_weight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :discard %>
+    <%= f.check_box :discard %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

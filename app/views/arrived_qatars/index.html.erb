@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Arrived Qatars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date arrived pittsburgh</th>
+      <th>Date delivered</th>
+      <th>Date arrived qatar</th>
+      <th>Sender</th>
+      <th>Description</th>
+      <th>Comment</th>
+      <th>Shipping weight</th>
+      <th>Delivered</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @arrived_qatars.each do |arrived_qatar| %>
+      <tr>
+        <td><%= arrived_qatar.date_arrived_pittsburgh %></td>
+        <td><%= arrived_qatar.date_delivered %></td>
+        <td><%= arrived_qatar.date_arrived_qatar %></td>
+        <td><%= arrived_qatar.sender %></td>
+        <td><%= arrived_qatar.description %></td>
+        <td><%= arrived_qatar.comment %></td>
+        <td><%= arrived_qatar.shipping_weight %></td>
+        <td><%= arrived_qatar.delivered %></td>
+        <td><%= link_to 'Show', arrived_qatar %></td>
+        <td><%= link_to 'Edit', edit_arrived_qatar_path(arrived_qatar) %></td>
+        <td><%= link_to 'Destroy', arrived_qatar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Arrived Qatar', new_arrived_qatar_path %>

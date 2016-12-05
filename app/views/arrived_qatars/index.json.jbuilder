@@ -1,0 +1,1 @@
+json.array! @arrived_qatars, partial: 'arrived_qatars/arrived_qatar', as: :arrived_qatar
