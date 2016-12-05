@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :beadmin_please, only: [:be_admin]
 
   # GET /users
   # GET /users.json
@@ -70,5 +71,24 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:id, :first_name, :last_name, :andrew_id, :username, :password, :facilities)
+    end
+
+
+
+    def beadmin_please
+      if !current_user.admin?
+        redirect_to root_path
+      end
+    end
+
+
+    def be_admin
+      user.toggle!(:admin)
+      if @user.save
+        redirect_to users_path, notice: 'User was successfully updated.'
+      else
+        flash[:alert]= 'Error in updating user'
+        redirect_to users_path
+      end
     end
 end
